@@ -1,7 +1,9 @@
+
 package c4s.calculations;
 
 import c4s.calculations.mathematics.Problems;
-import c4s.calculations.projecteuler.EulerRun;
+import c4s.calculations.projecteuler.AnswersEnum;
+import c4s.calculations.projecteuler.Solutions;
 
 /**
  * @author Damian
@@ -13,7 +15,7 @@ public class Calculations {
      */
     public static void main(String[] args) {
         
-        new EulerRun().run();
+        runProjectEuler_Solutions();
         
         //fizzBuzz();
         
@@ -25,6 +27,34 @@ public class Calculations {
         
         System.out.println(Problems.isPrime(31031, 2));
         System.out.println(Problems.isPrime(46656, 2));
+    }
+    
+    public static void runProjectEuler_Solutions() {
+        Solutions sol = new Solutions();
+        long retVal;
+        long ansVal;
+
+        retVal = sol.problem_001_VerIterate();
+        ansVal = AnswersEnum.get(AnswersEnum.P001);
+        System.out.println(retVal + " compare to " + ansVal + " result " + isOK(retVal, ansVal));
+
+        retVal = sol.problem_001_VerStream();
+        ansVal = AnswersEnum.get(AnswersEnum.P001);
+        System.out.println(retVal + " compare to " + ansVal + " result " + isOK(retVal, ansVal));
+
+        retVal = sol.problem_002_VerIterate();
+        ansVal = AnswersEnum.get(AnswersEnum.P002);
+        System.out.println(retVal + " compare to " + ansVal + " result " + isOK(retVal, ansVal));
+    }
+    
+    private static String isOK(long calculated, long answer) {
+        String ret;
+        if (calculated == answer) {
+            ret = "OK";
+        } else {
+            ret = "WRONG";
+        }       
+        return ret;
     }
     
     private static void fizzBuzz() {

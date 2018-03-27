@@ -1,7 +1,8 @@
+
 package c4s.calculations.mathematics;
 
 /**
- * @author Damian
+ * @author dniem
  */
 public class Problems {
      

@@ -1,3 +1,4 @@
+
 package c4s.calculations.projecteuler;
 
 /**
