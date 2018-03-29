@@ -15,19 +15,24 @@ public class ProjectEulerController {
 
         retVal = sol.problem_001_VerIterate();
         ansVal = AnswersEnum.get(AnswersEnum.P001);
-        printOut(retVal, ansVal);
+        parseAndPrint("001", retVal, ansVal);
 
         retVal = sol.problem_001_VerStream();
         ansVal = AnswersEnum.get(AnswersEnum.P001);
-        printOut(retVal, ansVal);
+        parseAndPrint("001", retVal, ansVal);
 
         retVal = sol.problem_002_VerIterate();
         ansVal = AnswersEnum.get(AnswersEnum.P002);
-        printOut(retVal, ansVal);
+        parseAndPrint("002", retVal, ansVal);
     }
-    
-    private void printOut(long retVal, long ansVal) {
-        System.out.println(retVal + " compare to " + ansVal + " result " + Tools.isOK(retVal, ansVal));
-        System.out.printf("%d compare to %d result %s\n", retVal, ansVal, Tools.isOK(retVal, ansVal));
+
+    private void parseAndPrint(String text, long retVal, long ansVal) {
+        String parsedVal
+                = String.format("Problem %s: %d compare to %d result %s", text, retVal, ansVal, Tools.isOK(retVal, ansVal));
+        Tools.printOut(parsedVal);
+
+        /*parsedVal = 
+                "Problem " + text + ": " + retVal + " compare to " + ansVal + " result " + Tools.isOK(retVal, ansVal);
+        Tools.printOut(parsedVal);*/
     }
 }

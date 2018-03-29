@@ -15,4 +15,8 @@ public class Tools {
         }
         return ret;
     }
+    
+    public static void printOut(String text) {
+        System.out.println(text);
+    }
 }
