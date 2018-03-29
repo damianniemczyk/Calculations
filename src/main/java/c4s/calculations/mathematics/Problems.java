@@ -1,6 +1,7 @@
 package c4s.calculations.mathematics;
 
 /**
+ * 
  * @author Damian
  */
 public class Problems {

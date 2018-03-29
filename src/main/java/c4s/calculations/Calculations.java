@@ -1,9 +1,10 @@
 package c4s.calculations;
 
 import c4s.calculations.mathematics.Problems;
-import c4s.calculations.projecteuler.RunEuler;
+import c4s.calculations.projecteuler.ProjectEulerController;
 
 /**
+ * 
  * @author Damian
  */
 public class Calculations {
@@ -13,7 +14,7 @@ public class Calculations {
      */
     public static void main(String[] args) {
         
-        new RunEuler().run();
+        new ProjectEulerController().run();
         
         //fizzBuzz();
         
@@ -37,6 +38,17 @@ public class Calculations {
                 System.out.println("Buzz " + i);
             }
         }
+    }
+    
+    private static void fizzBuzz2(int value) {
+        if (value % 3 == 0 && value % 5 == 0) {
+            System.out.println("FizzBuzz " + value);
+        } else if (value % 3 == 0) {
+            System.out.println("Fizz " + value);
+        } else if (value % 5 == 0) {
+            System.out.println("Buzz " + value);
+        }
+        if (value <= 1000) fizzBuzz2(value + 1);
     }
 
 }

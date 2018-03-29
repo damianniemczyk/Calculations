@@ -3,6 +3,7 @@ package c4s.calculations.projecteuler;
 import java.util.stream.IntStream;
 
 /**
+ * 
  * @author Damian
  */
 public class Solutions {
