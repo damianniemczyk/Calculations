@@ -24,6 +24,10 @@ public class ProjectEulerController {
         retVal = sol.problem_002_VerIterate();
         ansVal = AnswersEnum.get(AnswersEnum.P002);
         parseAndPrint("002", retVal, ansVal);
+        
+        retVal = sol.problem_003_VerIterate();
+        ansVal = AnswersEnum.get(AnswersEnum.P003);
+        parseAndPrint("003", retVal, ansVal);
     }
 
     private void parseAndPrint(String text, long retVal, long ansVal) {

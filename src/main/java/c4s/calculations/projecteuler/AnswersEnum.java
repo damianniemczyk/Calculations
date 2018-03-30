@@ -6,9 +6,9 @@ package c4s.calculations.projecteuler;
 public enum AnswersEnum {
     P001(233168), 
     P002(4613732), 
-    P003(0), 
-    P004(0), 
-    P005(0);
+    P003(6857), 
+    P004(906609), 
+    P005(232792560);
     
     private final long answer;
     
