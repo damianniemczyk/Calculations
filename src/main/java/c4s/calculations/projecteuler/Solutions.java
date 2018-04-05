@@ -17,7 +17,6 @@ public class Solutions {
     public long problem_001_VerIterate() {
         long ret = 0;
 
-        //Implementation
         for (int i = 1; i < 1000; i++) {
             if (i % 3 == 0 || i % 5 == 0) {
                 ret += i;
@@ -30,7 +29,6 @@ public class Solutions {
     public long problem_001_VerStream() {
         long ret = 0;
 
-        //Implementation
         ret = IntStream.range(1, 1000)
                 .filter(i -> i % 3 == 0 || i % 5 == 0)
                 .sum();
@@ -48,7 +46,6 @@ public class Solutions {
     public long problem_002_VerIterate() {
         long ret = -1;
 
-        //Implementation
         ret = calculateFibonacci(2, 1, 2);
         
         return ret;
@@ -76,11 +73,83 @@ public class Solutions {
         
         final long value = 600851475143L;
         
-        /*for (long i = value - 1; i > 1; i--) {
+        /*ret = LongStream.range(1L, value - 1L)
+                .filter(i -> value % i == 0)
+                .max().getAsLong();*/
+        
+                
+        /*final long value = 6008514L;
+        
+        for (long i = value - 1; i > 1; i--) {
             if (value % i == 0) {
                 ret = i;
                 break;
             }
+        }*/
+        return ret;
+    }
+    
+    /**
+     * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+        Find the largest palindrome made from the product of two 3-digit numbers.
+     * @return Calculation result
+     */
+    public long problem_004_VerIterate() {
+        long ret = -1;
+        long calc = -1;
+
+        for (int i = 999; i > 99; i--) {
+            for (int j = 999; j > 99; j--) {
+                calc = i * j;
+                if (isPalindrome(calc) && calc > ret) {
+                    ret = calc;
+                }
+            }
+        }
+        return ret;
+    }
+
+    public boolean isPalindrome(long value) {
+        boolean ret = true;
+
+        char[] tab = String.valueOf(value).toCharArray();
+        for (int k = 0; k < tab.length; k++) {
+            if (tab[k] != tab[tab.length - k - 1]) {
+                ret = false;
+            }
+        }
+        return ret;
+    }
+    
+    /**
+     * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+        What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+     * @return Calculation result
+     */
+    public long problem_005_VerIterate() {
+        long ret = 20;
+        boolean keepGoing = true;
+        
+        while(keepGoing) {
+            keepGoing = false;
+            for (int i = 1; i <= 20; i++) {
+                if (ret % i != 0) {
+                    ret = ret + 20;
+                    keepGoing = true;
+                    break;
+                }
+            }
+        }         
+        return ret;
+    }
+    
+    public long problem_005_VerStream() {
+        long ret = 20;
+        boolean keepGoing = true;
+        
+        /*Stream.builder().
+                .filter(i -> number % i == 0)
+                .count();
         }*/
         return ret;
     }
