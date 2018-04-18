@@ -1,6 +1,7 @@
 package c4s.calculations.projecteuler;
 
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 /**
  * 
@@ -71,15 +72,15 @@ public class Solutions {
     public long problem_003_VerIterate() {
         long ret = -1;
         
-        final long value = 600851475143L;
+        //final long value = 600851475143L;
+        final long value = 600851475L;
         
-        /*ret = LongStream.range(1L, value - 1L)
+        ret = LongStream.range(1L, value - 1L)
                 .filter(i -> value % i == 0)
-                .max().getAsLong();*/
+                .max().getAsLong();
         
                 
-        /*final long value = 6008514L;
-        
+        /*   
         for (long i = value - 1; i > 1; i--) {
             if (value % i == 0) {
                 ret = i;

@@ -14,7 +14,8 @@ public class Calculations {
     public static void main(String[] args) {
         
         new ProjectEulerController().run();
-        
+        System.out.println(potega(5,3));
+        System.out.println(silnia(5));
         //fizzBuzz();
         
         /*System.out.println(Problems.countBlocks(4));
@@ -48,6 +49,16 @@ public class Calculations {
             System.out.println("Buzz " + value);
         }
         if (value <= 1000) fizzBuzz2(value + 1);
+    }
+    
+    private static int potega(int liczba, int potega) {
+        if (potega == 1) return liczba;
+        else return liczba * potega(liczba, potega -1);
+    }
+    
+    private static int silnia(int liczba) {
+        if (liczba == 1) return 1;
+        else return liczba * silnia(liczba - 1);
     }
 
 }
