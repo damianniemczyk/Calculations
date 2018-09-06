@@ -1,4 +1,4 @@
-package c4s.calculations.mathematics;
+package com.c4s.calculations.mathematics;
 
 /**
  * 

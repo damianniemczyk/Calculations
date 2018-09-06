@@ -1,5 +1,7 @@
-c4s\calculations\GreetingController.class
-c4s\calculations\Main.class
-c4s\calculations\mathematics\projecteuler\AnswersEnum.class
-c4s\calculations\mathematics\projecteuler\Solutions.class
-c4s\calculations\mathematics\projecteuler\ProjectEulerController.class
+com\c4s\calculations\mathematics\projecteuler\Solutions.class
+com\c4s\calculations\Main.class
+com\c4s\calculations\GreetingController.class
+com\c4s\calculations\mathematics\projecteuler\AnswersEnum.class
+com\c4s\calculations\mathematics\Problems.class
+com\c4s\calculations\tools\Tools.class
+com\c4s\calculations\mathematics\projecteuler\ProjectEulerController.class
